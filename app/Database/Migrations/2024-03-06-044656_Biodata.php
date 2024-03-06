@@ -33,12 +33,12 @@ class Biodata extends Migration
             ] 
         ]);
         $this->forge->addKey('id', true,true);
-        $this->forge->createTable('biodata');
+        $this->forge->createTable('mahasiswa');
             
     }
 
     public function down()
     {
-        $this->forge->dropTable('biodata',true);
+        $this->forge->dropTable('mahasiswa',true);
     }
 }

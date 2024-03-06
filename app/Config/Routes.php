@@ -7,7 +7,7 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');
 $routes->get('/tambah', 'Home::tambah');
-$routes->post('/simpan', 'Home::simpan');
-$routes->get('/edit/(:segment)', 'Home::edit/$1');
-$routes->post('/update/(:segment)', 'Home::update/$1');
-$routes->get('/hapus/(:segment)', 'Home::hapus/$1');
+$routes->post('/submit', 'Home::simpan');
+$routes->get('/edit/(:any)', 'Home::edit/$1');
+$routes->post('/editsubmit', 'Home::editsubmit');
+$routes->get('/delete/(:any)', 'Home::delete/$1');

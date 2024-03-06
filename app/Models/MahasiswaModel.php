@@ -46,7 +46,13 @@ class MahasiswaModel extends Model
 
     public function updateMahasiswa($data, $id)
     {
-        return $this->update($id, $data);
+        try{
+        $this->where('id',$id)
+        ->set($data)
+        ->update();
+        }catch (\Exception $e){
+            die($e->getMessage());
+        }
     }
     public function deleteMahasiswa($data){
         $this->delete($data);

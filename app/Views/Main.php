@@ -43,11 +43,11 @@
         <?php
             $no = 1;
             foreach($data_mahasiswa as $row):
-                $id = $row['id'];
-                $nama = $row['nama'];
-                $umur = $row['umur'];
-                $prodi = $row['prodi'];
-                $asal = $row['asal'];
+                $id = $row -> id;
+                $nama = $row -> Nama;
+                $umur = $row -> Umur;
+                $prodi = $row -> Prodi;
+                $asal = $row -> Asal;
         ?>
         <tr>
             <th scope="row"><?= $no++ ?></th>
@@ -56,8 +56,8 @@
             <td><?= $prodi ?></td>
             <td><?= $asal ?></td>
             <td>
-                <a href="/edit/<?= $id ?>" class="btn btn-warning">Edit</a>
-                <a href="/hapus/<?= $id ?>" class="btn btn-danger">Hapus</a>
+                <a href="<?= base_url('/edit/'. $id) ?>" class="btn btn-warning">Edit</a>
+                <a href="<?= base_url('/delete/'. $id) ?>" class="btn btn-danger">Hapus</a>
             </td>
         </tr>
         <?php endforeach; 

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,7 +32,8 @@
 
 <div class="container">
     <h1>Form Mahasiswa</h1>
-    <form action="<?= base_url('/submit') ?>" method="post">
+    <form action="<?= base_url('/editsubmit') ?>" method="post">
+    <input type="text" class="form-control" name="Nama" id="nama" placeholder="Masukkan nama" value="<?php echo $id ?>">
     <div class="mb-3">
         <label for="nama" class="form-label">Nama</label>
         <input type="text" class="form-control" name="Nama" id="nama" placeholder="Masukkan nama">
